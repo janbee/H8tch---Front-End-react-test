@@ -1,0 +1,144 @@
+.portal-wrap {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  * {
+    outline: none;
+  }
+
+  .container {
+    min-height: 60%;
+    width: 60%;
+    overflow: auto;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+
+    .header {
+      font-size: 45.83px;
+      font-style: italic;
+      color: #FFF;
+      font-family: 'Merriweather', serif;
+    }
+
+    .sub-header {
+      text-align: justify;
+      font-size: 23px;
+      color: #8fffee;
+      margin-top: 20px;
+
+    }
+
+    .ttl {
+      height: 55px;
+      background: rgb(194, 202, 214);
+      background: linear-gradient(180deg, rgba(194, 202, 214, 1) 0%, rgba(129, 143, 162, 1) 50%);
+      font-size: 24px;
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 80px;
+      margin-bottom: 10px;
+
+      span {
+        text-transform: uppercase;
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-evenly;
+
+      > div {
+        width: 100%;
+
+        &:first-child{
+          margin-right: 10px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        &:nth-child(2) {
+          #column-wrap {
+            border-right-width: 4px!important;
+          }
+        }
+        &:nth-child(3) {
+          #column-wrap {
+            border-left-width: 4px!important;
+          }
+        }
+
+        .input-wrap {
+          min-height: 250px;
+          flex: 1;
+
+          &:last-child{
+            display: flex;
+            align-items: flex-end;
+            flex-wrap: wrap;
+
+            > * {
+              width: 100%;
+            }
+          }
+
+          button,
+          select,
+          input {
+            width: 100%;
+            height: 73px;
+            background: #9ba1ab;
+            border: 4px solid #FFF;
+            color: #FFF;
+            padding: 10px;
+            font-size: 16px;
+
+            &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+              color: #FFF;
+              opacity: .5; /* Firefox */
+            }
+
+
+            &.select-column {
+              margin-top: 20px;
+            }
+
+            &.btn{
+              cursor: pointer;
+              background: #79818f!important;
+            }
+          }
+
+          .search-wrap {
+            span{
+              font-size: 16px;
+              color: #FFF;
+              margin-bottom: 15px;
+              display: block;
+            }
+            > div {
+              position: relative;
+
+              input {
+                height: 50px;
+              }
+
+              svg {
+                position: absolute;
+                right: 15px;
+                top: 17px;
+              }
+            }
+
+          }
+
+        }
+      }
+    }
+
+  }
+}
